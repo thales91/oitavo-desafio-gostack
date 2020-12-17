@@ -42,8 +42,6 @@ describe('App', () => {
       email: 'oi@rocketseat.com.br',
     });
 
-    console.log(response.body);
-
     expect(response.body).toEqual(
       expect.objectContaining({
         name: 'Rocketseat',
@@ -144,7 +142,7 @@ describe('App', () => {
           name: 'Rocketseat',
           email: 'oi@rocketseat.com.br',
         }),
-        orders_products: expect.arrayContaining([
+        order_products: expect.arrayContaining([
           expect.objectContaining({
             product_id: product.body.id,
             price: '500.00',
@@ -298,7 +296,7 @@ describe('App', () => {
           name: 'Rocketseat',
           email: 'oi@rocketseat.com.br',
         }),
-        orders_products: expect.arrayContaining([
+        order_products: expect.arrayContaining([
           expect.objectContaining({
             product_id: product.body.id,
             price: '500.00',
